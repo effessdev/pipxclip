@@ -10,7 +10,7 @@
 
 A fast, cross-platform CLI that turns a project directory into clean Markdown context for an LLM chat (no `.gitignore`ed files), and copies it straight to your clipboard.
 
-<img src="assets/preview.webp" alt="Preview" width="100%">
+<img width="1280" alt="Preview" src="https://github.com/user-attachments/assets/69c1df9a-9d1f-4c63-8a4d-3f2b12eb9ad1" />
 
 ## Install
 
