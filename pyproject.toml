@@ -32,7 +32,6 @@ dev = ["pytest>=7.0"]
 
 [project.scripts]
 pipxclip = "pipxclip.cli:main"
-rrcc = "pipxclip.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/effessdev/pipxclip"
