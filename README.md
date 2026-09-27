@@ -4,7 +4,7 @@
 > - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=effessdev.reptclip-for-vscode)
 > - [Open VSX Registry](https://open-vsx.org/extension/effessdev/reptclip-for-vscode)
 
-# ReptClip - Fast Context for Your ChatBot
+# PipxClip - Fast Context for Your ChatBot
 
 A fast, cross-platform CLI that turns a project directory into clean Markdown context for an LLM chat (no `.gitignore`ed files), and copies it straight to your clipboard.
 
@@ -17,23 +17,23 @@ A fast, cross-platform CLI that turns a project directory into clean Markdown co
 After installing Python, run:
 
 ```bash
-pip install reptclip
+pip install pipxclip
 ```
 
 ### Ubuntu
 
 ```bash
 sudo apt update && sudo apt install pipx
-pipx install reptclip
+pipx install pipxclip
 pipx ensurepath
 ```
 
 ## Basic Usage
 
-Run the `reptclip` command or its left-hand alias `rrcc` from the root of your project:
+Run the `pipxclip` command from the root of your project:
 
 ```bash
-rrcc
+pipxclip
 ```
 
 This copies a Markdown snapshot of your project structure (every non-ignored file) to the clipboard, ready to paste into an LLM chat.
@@ -58,14 +58,14 @@ src/main.py
 
 ## Natural CLI Syntax
 
-ReptClip supports simple, readable English commands.
+PipxClip supports simple, readable English commands.
 
 ### Including & Excluding Files
 
 Glob patterns are used to specify which files to include in the context. For example:
 
 ```bash
-rrcc "AGENTS.md"
+pipxclip "AGENTS.md"
 ```
 
 Example output for this command:
@@ -93,7 +93,7 @@ Contents of AGENTS.md.
 To specify files to exclude, use `e` or `exclude`. Here is an example:
 
 ```bash
-rrcc "**/*.py" "AGENTS.md" e "src/secret.py"
+pipxclip "**/*.py" "AGENTS.md" e "src/secret.py"
 ```
 
 This includes all `.py` files and `AGENTS.md`, while excluding `secret.py`.
@@ -109,15 +109,15 @@ You can control output targets and prompt behavior directly from the command lin
 Example combining options:
 
 ```bash
-rrcc "**/*.py" npt o "out.md" nc
+pipxclip "**/*.py" npt o "out.md" nc
 ```
 
 ## Config File, Default Settings, and Presets
 
-You can define presets in `reptclip-config.toml`. Create a default one by running:
+You can define presets in `pipxclip-config.toml`. Create a default one by running:
 
 ```bash
-rrcc init
+pipxclip init
 ```
 
 Default configuration:
@@ -140,7 +140,7 @@ exclude = []
 The preset named `default` is always applied. This can be used for **defining default configurations**. Other presets can be applied using `p` or `preset`:
 
 ```bash
-rrcc p mypreset
+pipxclip p mypreset
 ```
 
 ### Command Reference

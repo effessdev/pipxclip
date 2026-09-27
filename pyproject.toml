@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "reptclip"
+name = "pipxclip"
 version = "4.1.1"
 description = "Generate Markdown context of a git repository and copy it straight to your clipboard, ready to paste into an LLM chat."
 readme = "README.md"
@@ -31,11 +31,11 @@ dependencies = [
 dev = ["pytest>=7.0"]
 
 [project.scripts]
-reptclip = "reptclip.cli:main"
-rrcc = "reptclip.cli:main"
+pipxclip = "pipxclip.cli:main"
+rrcc = "pipxclip.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/effessdev/reptclip-cli"
+Homepage = "https://github.com/effessdev/pipxclip"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/reptclip"]
+packages = ["src/pipxclip"]

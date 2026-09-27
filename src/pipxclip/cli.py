@@ -1,4 +1,4 @@
-"""Command-line entry point for ReptClip."""
+"""Command-line entry point for PipxClip."""
 
 from __future__ import annotations
 
@@ -6,17 +6,17 @@ import inspect
 import sys
 from pathlib import Path
 
-from reptclip.cli_parser import ParsedArgs, parse_cli_args
-from reptclip.clipboard import copy_to_clipboard
-from reptclip.config import read_config, write_default_config
-from reptclip.file_reader import read_file_content
-from reptclip.filters import filter_files
-from reptclip.git_files import get_git_tracked_files
-from reptclip.markdown_builder import build_markdown
+from pipxclip.cli_parser import ParsedArgs, parse_cli_args
+from pipxclip.clipboard import copy_to_clipboard
+from pipxclip.config import read_config, write_default_config
+from pipxclip.file_reader import read_file_content
+from pipxclip.filters import filter_files
+from pipxclip.git_files import get_git_tracked_files
+from pipxclip.markdown_builder import build_markdown
 
 
 def run(argv: list[str] | None = None) -> int:
-    """Run the full reptclip program flow. Returns a process exit code."""
+    """Run the full PipxClip program flow. Returns a process exit code."""
     args: ParsedArgs = parse_cli_args(argv)
     root = Path.cwd()
 
@@ -52,7 +52,7 @@ def run(argv: list[str] | None = None) -> int:
     for preset_name in args.preset:
         if preset_name not in presets_by_name:
             print(
-                f"Error: preset '{preset_name}' was not found in {root / 'reptclip-config.toml'}.",
+                f"Error: preset '{preset_name}' was not found in {root / 'pipxclip-config.toml'}.",
                 file=sys.stderr,
             )
             return 1

@@ -1,4 +1,4 @@
-"""Reading presets from a reptclip-config.toml file."""
+"""Reading presets from a pipxclip-config.toml file."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ try:
 except ModuleNotFoundError:  # pragma: no cover - exercised on Python < 3.11
     import tomli as tomllib  # type: ignore[no-redef]
 
-CONFIG_FILENAME = "reptclip-config.toml"
+CONFIG_FILENAME = "pipxclip-config.toml"
 DEFAULT_CONFIG_TEMPLATE = (
     '[[presets]]\n'
     'name = "default"\n'
@@ -27,7 +27,7 @@ DEFAULT_CONFIG_TEMPLATE = (
 
 
 def read_config(root: Path) -> list[dict[str, Any]]:
-    """Read presets from `reptclip-config.toml` in `root`.
+    """Read presets from `pipxclip-config.toml` in `root`.
 
     Returns an empty list if the file doesn't exist.
     """
@@ -78,7 +78,7 @@ def read_config(root: Path) -> list[dict[str, Any]]:
 
 
 def write_default_config(root: Path) -> Path:
-    """Write a default `reptclip-config.toml` file to `root`."""
+    """Write a default `pipxclip-config.toml` file to `root`."""
     config_path = root / CONFIG_FILENAME
     config_path.write_text(DEFAULT_CONFIG_TEMPLATE, encoding="utf-8")
     return config_path

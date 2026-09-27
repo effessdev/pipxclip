@@ -1,8 +1,8 @@
 from pathlib import Path
 
-import reptclip.cli as cli
-from reptclip.cli import run
-from reptclip.cli_parser import parse_cli_args
+import pipxclip.cli as cli
+from pipxclip.cli import run
+from pipxclip.cli_parser import parse_cli_args
 
 
 def test_parse_cli_args_supports_hyphens_and_traditional_flags() -> None:
@@ -35,7 +35,7 @@ def test_init_command_creates_default_config(tmp_path: Path, monkeypatch) -> Non
     exit_code = run(["init"])
 
     assert exit_code == 0
-    assert (tmp_path / "reptclip-config.toml").read_text(encoding="utf-8") == (
+    assert (tmp_path / "pipxclip-config.toml").read_text(encoding="utf-8") == (
         '[[presets]]\n'
         'name = "default"\n'
         'include = ["AGENTS.md"]\n'
@@ -54,7 +54,7 @@ def test_run_applies_default_preset_and_overrides_with_selected_preset(
     tmp_path: Path, monkeypatch
 ) -> None:
     monkeypatch.chdir(tmp_path)
-    (tmp_path / "reptclip-config.toml").write_text(
+    (tmp_path / "pipxclip-config.toml").write_text(
         '[[presets]]\n'
         'name = "default"\n'
         'include = ["src/**"]\n'

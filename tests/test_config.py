@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from reptclip.config import read_config
+from pipxclip.config import read_config
 
 
 def test_missing_config_returns_empty_list(tmp_path: Path):
@@ -8,7 +8,7 @@ def test_missing_config_returns_empty_list(tmp_path: Path):
 
 
 def test_reads_presets(tmp_path: Path):
-    (tmp_path / "reptclip-config.toml").write_text(
+    (tmp_path / "pipxclip-config.toml").write_text(
         '[[presets]]\n'
         'name = "default"\n'
         'include = ["AGENTS.md"]\n'
@@ -47,7 +47,7 @@ def test_reads_presets(tmp_path: Path):
 
 
 def test_preset_optional_fields_omitted(tmp_path: Path):
-    (tmp_path / "reptclip-config.toml").write_text(
+    (tmp_path / "pipxclip-config.toml").write_text(
         '[[presets]]\n'
         'name = "minimal"\n'
         'include = ["a.py"]\n'
