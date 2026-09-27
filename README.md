@@ -1,16 +1,16 @@
+> # Note: ReptClip is Now Available in VS Code & VS Code Compatible Editors
+>
+> **ReptClip for VS Code** introduces a rich set of features that fundamentally changes how it's used:
+> 
+> - [ReptClip for VS Code GitHub Repository](https://github.com/effessdev/reptclip-vscode)
+> - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=effessdev.reptclip-for-vscode)
+> - [Open VSX Registry](https://open-vsx.org/extension/effessdev/reptclip-for-vscode)
+
 # ReptClip CLI - Fast Context for Your ChatBot
 
 A fast, cross-platform CLI that turns a project directory into clean Markdown context for an LLM chat (no `.gitignore`ed files), and copies it straight to your clipboard.
 
 <img src="assets/preview.webp" alt="Preview" width="100%">
-
-> ## Note: ReptClip is Now Available in VS Code & VS Code Compatible Editors!
->
-> [ReptClip for VS Code](https://github.com/effessdev/reptclip-vscode) introduces a rich set of features that fundamentally changes how it's used:
-> 
-> - [GitHub Repository](https://github.com/effessdev/reptclip-vscode)
-> - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=effessdev.reptclip-for-vscode)
-> - [Open VSX Registry](https://open-vsx.org/extension/effessdev/reptclip-for-vscode)
 
 ## Install
 
